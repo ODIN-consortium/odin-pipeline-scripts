@@ -1,0 +1,14 @@
+# Default ODIN Mobile Lab Pipeline Paths
+# This file is checked into the repo and used for integrity checks
+# It contains all default path variables used by pipeline scripts
+
+minknow_data_dir="/mnt/c/ODIN/mock_MinKNOW_output_folder/"
+venv_folder="${HOME}/venv"
+output_dir="/mnt/c/ODIN/data"
+metadata_file="/mnt/c/ODIN/data/metadata_mobile_lab.xlsx"
+databases_file="/mnt/c/ODIN/input_sheets/databases.csv"
+taxprofiler_dir="${HOME}/.nextflow/assets/nf-core"
+biomeme_data_path="/mnt/c/ODIN/data"
+pathogens_file="${HOME}/pipeline_scripts/config/pathogen_group_map.yaml"
+amr_data_path="/mnt/c/ODIN/data"
+amr_output_dir="/mnt/c/ODIN/data/amr_datasets"

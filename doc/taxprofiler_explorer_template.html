@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Taxprofiler Explorer Template</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+</head>
+<body>
+<h1 id="taxprofiler-explorer-template-interactive-bar-chart-selections">Taxprofiler Explorer Template: Interactive Bar Chart Selections</h1>
+<p>To use the template feature for datasets with the taxprofiler template in the front end:</p>
+<figure>
+<img src="taxprofiler_explorer.png" alt="" /><figcaption>img1.png</figcaption>
+</figure>
+<ol type="1">
+<li><p><strong>Locate Your Dataset</strong><br />
+In the table view, find the dataset whose name matches the template regex configured in <code>ServerConfig.json</code>.</p></li>
+<li><p><strong>Find the Template Icon</strong><br />
+Next to the matching dataset, look for the template icon:<br />
+<code>&lt;mat-icon&gt;open_in_new&lt;/mat-icon&gt;</code></p></li>
+<li><p><strong>Click the Icon</strong><br />
+Click the <code>open_in_new</code> icon to open the taxprofiler template for that dataset.</p></li>
+<li><p><strong>Explore Bar Charts</strong><br />
+In the explorer view, use the interactive bar charts for <strong>sampling site</strong>, <strong>Priority pathogen group</strong>, <strong>Genus</strong>, and <strong>Target group</strong> to make selections.</p></li>
+<li><p><strong>View Abundance Data</strong><br />
+Select bars to filter and view abundance data at different levels. The display updates according to your selection.</p></li>
+</ol>
+<p><strong>Notes:</strong><br />
+- The <code>open_in_new</code> icon only appears for datasets matching the configured regex.<br />
+- The taxprofiler template enables interactive exploration by category.<br />
+- Selections are reflected in all linked visualizations and tables.<br />
+- If you do not see the icon, check your server configuration and refresh the page.</p>
+<hr />
+<h2 id="downloading-your-selection-as-a-csv-file">Downloading Your Selection as a CSV File</h2>
+<p>After making a selection in the bar charts, you can download the filtered data as a CSV file:</p>
+<ol type="1">
+<li><p><strong>Go to the Table View</strong><br />
+Switch to the table view where your filtered selection is displayed.</p></li>
+<li><p><strong>Open the Drop Down Menu</strong><br />
+Click the drop down menu (often shown as three dots or an arrow) above the table.</p></li>
+<li><p><strong>Select “Download table (csv format)”</strong><br />
+Choose the “Download table (csv format)” option to export the currently filtered data.</p></li>
+</ol>
+<figure>
+<img src="table_download.png" alt="" /><figcaption>img2.png</figcaption>
+</figure>
+<p>This allows you to save and share your selected subset for further analysis or reporting.</p>
+</body>
+</html>

@@ -1,0 +1,14 @@
+#!/bin/bash
+# IQ-TREE wrapper for squirrel compatibility.
+#
+# squirrel 1.3.2 calls plain `iqtree` (reconstruction.smk) without --seqtype,
+# which causes IQ-TREE 3 to fail with "Unknown sequence type" on alignments
+# that are mostly ambiguous bases (common for low-coverage mpox samples).
+#
+# This wrapper injects --seqtype DNA and delegates to the real IQ-TREE 3 binary
+# via an absolute path so there is no recursive resolution through PATH.
+#
+# Activated by start_mpox.sh prepending pipeline_scripts/wrappers/ to PATH.
+# CONDA_PREFIX must be set (it is after `conda activate squirrel`).
+
+exec "${CONDA_PREFIX}/bin/iqtree3" --seqtype DNA "$@"

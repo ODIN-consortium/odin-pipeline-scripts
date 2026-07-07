@@ -1,0 +1,337 @@
+# ODIN Pathogen Group Map
+# Replaces "pathogens for database.xlsx" (sheet: comprehensive_pathogen_list).
+# Used by create_kraken_datasets.py to assign pathogen groups to Kraken2 output.
+#
+# Fields per entry:
+#   taxid:           NCBI Taxonomy ID (integer, required)
+#   scientific_name: Scientific name (for reference / documentation)
+#   type:            bacteria | virus | eukaryotic
+#   target_group:    AMR | waterborne | non-waterborne
+#   priority:        WP2-priority  (omit if not applicable)
+#   pathogen_group:  Group label used in analysis outputs (required)
+#
+# NOTE: Group names containing a trailing zero-width space (\u200b) are written
+# using YAML double-quoted Unicode escapes to keep the file visually clean while
+# preserving the exact characters that appear in published analysis outputs.
+#
+# NOTE: "Cryptosporidium " has a deliberate trailing space — do not remove it.
+#
+# Salmonella is plotted as a single group (per SME consensus, June 2026):
+#   Salmonella spp. (AMR) - TaxID 28901 — total S. enterica clade count; includes all
+#                           serovars (Typhi, Typhimurium, etc.).
+#
+# PRESERVED FOR FUTURE USE — two-tier approach was previously implemented but removed:
+#   reclassify_salmonella() in create_kraken_datasets.py can split out
+#   TaxID 90370 (Typhi) and TaxID 90371 (Typhimurium) if serovar-level reporting
+#   is needed in future. Re-enable by adding the TaxID 90370 entry below and
+#   calling reclassify_salmonella() in main().
+#
+# NOTE: Subspecies TaxIDs (59202, 59204, 59205, 59207, 218493) are intentionally absent
+# from this display list — their reads are already captured inside TaxID 28901's clade count.
+# They may still be present in the Kraken2 database for classification accuracy.
+# TaxID 590 (Salmonella genus) is also absent — it caused LCA-collapse artefacts.
+# TaxID 54736 (S. bongori) is absent — rare, and S. enterica covers the clinically
+# relevant Salmonella burden.
+
+pathogens:
+
+  # ── AMR bacteria ──────────────────────────────────────────────────────────
+
+  - taxid: 562
+    scientific_name: "Escherichia coli"
+    type: bacteria
+    target_group: AMR
+    priority: WP2-priority
+    pathogen_group: "ESBL/Carbapenemase producing E. coli\u200b"
+
+  - taxid: 573
+    scientific_name: "Klebsiella pneumoniae"
+    type: bacteria
+    target_group: AMR
+    priority: WP2-priority
+    pathogen_group: "ESBL/Carbapenemase producing K. pneumoniae\u200b"
+
+  - taxid: 547
+    scientific_name: "Enterobacter"
+    type: bacteria
+    target_group: AMR
+    pathogen_group: "ESBL/Carbapenemase producing Enterobacter species\u200b"
+
+  - taxid: 1352
+    scientific_name: "Enterococcus faecium"
+    type: bacteria
+    target_group: AMR
+    pathogen_group: "Vancomycin resistant E. faecium\u200b"
+
+  - taxid: 287
+    scientific_name: "Pseudomonas aeruginosa"
+    type: bacteria
+    target_group: AMR
+    pathogen_group: "CARBA- P. aeruginosa"
+
+  - taxid: 470
+    scientific_name: "Acinetobacter baumannii"
+    type: bacteria
+    target_group: AMR
+    pathogen_group: "CARBA- A. baumannii"
+
+  - taxid: 498019
+    scientific_name: "Candidozyma auris"
+    type: eukaryotic
+    target_group: AMR
+    pathogen_group: "AMR Candida auris"
+
+  # Total S. enterica clade — all Salmonella spp. including Typhi and Typhimurium.
+  # Clade count (No of Frags root) captures all descendants, so all serovars are included.
+  - taxid: 28901
+    scientific_name: "Salmonella enterica"
+    type: bacteria
+    target_group: AMR
+    pathogen_group: "Salmonella spp."
+
+  # ── Waterborne bacteria ──────────────────────────────────────────────────
+
+  - taxid: 127906
+    scientific_name: "Vibrio cholerae O1"
+    type: bacteria
+    target_group: waterborne
+    priority: WP2-priority
+    pathogen_group: "Vibrio cholerae"
+
+  - taxid: 45888
+    scientific_name: "Vibrio cholerae O139"
+    type: bacteria
+    target_group: waterborne
+    priority: WP2-priority
+    pathogen_group: "Vibrio cholerae"
+
+  # ── Non-waterborne bacteria ────────────────────────────────────────────────
+
+  - taxid: 1773
+    scientific_name: "Mycobacterium tuberculosis"
+    type: bacteria
+    target_group: non-waterborne
+    pathogen_group: "Mycobacterium tuberculosis"
+
+  # ── Waterborne protozoa ───────────────────────────────────────────────────
+
+  # NOTE: "Cryptosporidium " has a deliberate trailing space — preserves group key used in analysis.
+  - taxid: 5807
+    scientific_name: "Cryptosporidium parvum"
+    type: eukaryotic
+    target_group: waterborne
+    pathogen_group: "Cryptosporidium "
+
+  - taxid: 237895
+    scientific_name: "Cryptosporidium hominis"
+    type: eukaryotic
+    target_group: waterborne
+    pathogen_group: "Cryptosporidium "
+
+  - taxid: 93969
+    scientific_name: "Cryptosporidium meleagridis"
+    type: eukaryotic
+    target_group: waterborne
+    pathogen_group: "Cryptosporidium "
+
+  - taxid: 195482
+    scientific_name: "Cryptosporidium canis"
+    type: eukaryotic
+    target_group: waterborne
+    pathogen_group: "Cryptosporidium "
+
+  - taxid: 83540
+    scientific_name: "Cryptosporidium felis"
+    type: eukaryotic
+    target_group: waterborne
+    pathogen_group: "Cryptosporidium "
+
+  - taxid: 396558
+    scientific_name: "Cryptosporidium suis"
+    type: eukaryotic
+    target_group: waterborne
+    pathogen_group: "Cryptosporidium "
+
+  - taxid: 3034913
+    scientific_name: "Cryptosporidium mortiferum"
+    type: eukaryotic
+    target_group: waterborne
+    pathogen_group: "Cryptosporidium "
+
+  - taxid: 5741
+    scientific_name: "Giardia intestinalis"
+    type: eukaryotic
+    target_group: waterborne
+    pathogen_group: "Giardia"
+
+  - taxid: 5742
+    scientific_name: "Giardia muris"
+    type: eukaryotic
+    target_group: waterborne
+    pathogen_group: "Giardia"
+
+  - taxid: 2137164
+    scientific_name: "Giardia agilis"
+    type: eukaryotic
+    target_group: waterborne
+    pathogen_group: "Giardia"
+
+  - taxid: 187323
+    scientific_name: "Giardia psittaci"
+    type: eukaryotic
+    target_group: waterborne
+    pathogen_group: "Giardia"
+
+  - taxid: 5743
+    scientific_name: "Giardia ardeae"
+    type: eukaryotic
+    target_group: waterborne
+    pathogen_group: "Giardia"
+
+  - taxid: 61965
+    scientific_name: "Giardia microti"
+    type: eukaryotic
+    target_group: waterborne
+    pathogen_group: "Giardia"
+
+  # ── Waterborne viruses ─────────────────────────────────────────────────────
+
+  - taxid: 12080
+    scientific_name: "Poliovirus 1"
+    type: virus
+    target_group: waterborne
+    pathogen_group: "Poliovirus"
+
+  - taxid: 12083
+    scientific_name: "Poliovirus 2"
+    type: virus
+    target_group: waterborne
+    pathogen_group: "Poliovirus"
+
+  - taxid: 12086
+    scientific_name: "Poliovirus 3"
+    type: virus
+    target_group: waterborne
+    pathogen_group: "Poliovirus"
+
+  - taxid: 28875
+    scientific_name: "Rotavirus A"
+    type: virus
+    target_group: waterborne
+    pathogen_group: "Rotavirus"
+
+  - taxid: 12092
+    scientific_name: "Hepatovirus A"
+    type: virus
+    target_group: waterborne
+    pathogen_group: "Hepatitis A"
+
+  - taxid: 1987126
+    scientific_name: "Hepatovirus E"
+    type: virus
+    target_group: waterborne
+    pathogen_group: "Hepatitis E"
+
+  - taxid: 12059
+    scientific_name: "Enterovirus"
+    type: virus
+    target_group: waterborne
+    pathogen_group: "Non-polio enterovirus"
+
+  - taxid: 142786
+    scientific_name: "Norovirus"
+    type: virus
+    target_group: waterborne
+    pathogen_group: "Norovirus"
+
+  # ── Non-waterborne viruses ─────────────────────────────────────────────────
+
+  - taxid: 2697049
+    scientific_name: "SARS-CoV-2"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "SARS-CoV-2"
+
+  - taxid: 11320
+    scientific_name: "Influenza A virus"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "Influenza A&B"
+
+  - taxid: 2955291
+    scientific_name: "Alphainfluenzavirus influenzae"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "Influenza A&B"
+
+  - taxid: 3052345
+    scientific_name: "Morbillivirus hominis"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "Measles & Rubella"
+
+  - taxid: 2560602
+    scientific_name: "Mumps orthorubulavirus"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "Measles & Rubella"
+
+  - taxid: 2846071
+    scientific_name: "Rubivirus rubellae"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "Measles & Rubella"
+
+  - taxid: 12637
+    scientific_name: "Dengue virus"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "Dengue virus"
+
+  - taxid: 186538
+    scientific_name: "Zaire ebolavirus"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "Ebola virus"
+
+  - taxid: 565995
+    scientific_name: "Bundibugyo ebolavirus"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "Ebola virus"
+
+  - taxid: 186540
+    scientific_name: "Sudan ebolavirus"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "Ebola virus"
+
+  - taxid: 186541
+    scientific_name: "Taï Forest ebolavirus"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "Ebola virus"
+
+  - taxid: 3049954
+    scientific_name: "Orthopneumovirus hominis"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "Respiratory syncytial virus"
+
+  - taxid: 10244
+    scientific_name: "Monkeypox virus"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "Mpox virus"
+
+  - taxid: 3052505
+    scientific_name: "Marburg marburgvirus"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "Marburg virus"
+
+  - taxid: 3052310
+    scientific_name: "Lassa mammarenavirus"
+    type: virus
+    target_group: non-waterborne
+    pathogen_group: "Lassa virus"

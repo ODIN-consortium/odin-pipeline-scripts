@@ -1,0 +1,38 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.pytest_cache/
+
+# Logs
+*.log
+
+# Backups
+*.bak
+*.bup
+
+# Environment
+.env
+
+# Data folders
+enlighten/data/
+data/
+
+# Sphinx HTML build output
+enlighten/files/public/html/userdoc/
+
+# Temporary files
+tmp/
+
+# Large binary inputs — download separately, do not commit
+*.xlsx
+notebooks/

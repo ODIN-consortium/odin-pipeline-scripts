@@ -1,0 +1,134 @@
+{
+    "datasets": [
+    ],
+    "fillNaN": false,
+    "filterVisibility": true,
+    "fontSize": 11,
+    "name": "pathogen explorer",
+    "pages": [
+        {
+            "columns": "1",
+            "id": "28471288299089204",
+            "name": "Info",
+            "tiles": [
+                {
+                    "activeProbe": false,
+                    "bounds": {
+                    },
+                    "cesiumSettings": null,
+                    "colormap": "api/cmap/viridis",
+                    "colSpan": 1,
+                    "columns": [
+                    ],
+                    "dataset": "metadata",
+                    "datasetType": "metadata",
+                    "filters": {
+                    },
+                    "hasFilters": false,
+                    "hasRawData": false,
+                    "id": "8749360104551214",
+                    "info": "welcome.html",
+                    "lastDraw": 0,
+                    "legendVisible": false,
+                    "mapSettings": null,
+                    "pageId": "0",
+                    "playback": false,
+                    "plotModels": [
+                    ],
+                    "qcFilter": false,
+                    "rawData": false,
+                    "recommendedDrawLoad": 20,
+                    "recommendedDrawSteps": 2,
+                    "rowSpan": 1,
+                    "scaleFactor": 30,
+                    "sizeFactor": 1,
+                    "trackValue": false,
+                    "type": "info"
+                }
+            ]
+        },
+        {
+            "columns": "1",
+            "id": "28471288299089204",
+            "name": "Biomeme",
+            "tiles": [
+                {
+                    "activeProbe": false,
+                    "bounds": {
+                    },
+                    "cesiumSettings": null,
+                    "colormap": "api/cmap/viridis",
+                    "colSpan": 1,
+                    "columns": [
+                    ],
+                    "dataset": "metadata",
+                    "datasetType": "metadata",
+                    "filters": {
+                    },
+                    "hasFilters": false,
+                    "hasRawData": false,
+                    "id": "8749360104551214",
+                    "info": "biomemeassay_explorer_template.html",
+                    "lastDraw": 0,
+                    "legendVisible": false,
+                    "mapSettings": null,
+                    "pageId": "0",
+                    "playback": false,
+                    "plotModels": [
+                    ],
+                    "qcFilter": false,
+                    "rawData": false,
+                    "recommendedDrawLoad": 20,
+                    "recommendedDrawSteps": 2,
+                    "rowSpan": 1,
+                    "scaleFactor": 30,
+                    "sizeFactor": 1,
+                    "trackValue": false,
+                    "type": "info"
+                }
+            ]
+        },
+        {
+            "columns": "1",
+            "id": "28471288299089204",
+            "name": "Taxprofiler",
+            "tiles": [
+                {
+                    "activeProbe": false,
+                    "bounds": {
+                    },
+                    "cesiumSettings": null,
+                    "colormap": "api/cmap/viridis",
+                    "colSpan": 1,
+                    "columns": [
+                    ],
+                    "dataset": "metadata",
+                    "datasetType": "metadata",
+                    "filters": {
+                    },
+                    "hasFilters": false,
+                    "hasRawData": false,
+                    "id": "8749360104551214",
+                    "info": "taxprofiler_explorer_template.html",
+                    "lastDraw": 0,
+                    "legendVisible": false,
+                    "mapSettings": null,
+                    "pageId": "0",
+                    "playback": false,
+                    "plotModels": [
+                    ],
+                    "qcFilter": false,
+                    "rawData": false,
+                    "recommendedDrawLoad": 20,
+                    "recommendedDrawSteps": 2,
+                    "rowSpan": 1,
+                    "scaleFactor": 30,
+                    "sizeFactor": 1,
+                    "trackValue": false,
+                    "type": "info"
+                }
+            ]
+        }
+     ],
+    "selectedPage": 0
+}

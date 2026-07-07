@@ -1,0 +1,79 @@
+
+services:
+  enlweb-api:
+    image: norceresearch1/enlweb-api:2026.6.2
+    container_name: enlweb-api-odin-ml
+    ports:
+      - "8081:8080"
+
+    # Pass all variables from .env into the container
+    # This overrides Dockerfile defaults (ENL_HOST, ENL_PORT, ENL_LOG_LEVEL, ENL_WORKERS)
+    # And includes optional variables like REQUESTS_CA_BUNDLE, PIP_CERT if set
+
+    volumes:
+      # Mount unified config directory (contains server_config.yaml and client_config.yaml)
+      - ./config:/appconfig:ro
+
+      # Mount data directory (HOST_DATA_PATH from .env -> /appdata/data in container)
+      - ${HOST_DATA_PATH:-./data}:/appdata/data:ro
+
+      # Mount files directory for static assets
+      - ${HOST_PUBLIC_FILES_PATH:-./files/public}:/appdata/files/public:ro
+
+      # Mount certificate directory for runtime pip operations and HTTPS requests
+      # Conditional: Works when HOST_CERT_PATH is set in .env (NORCE internal network)
+      # For external deployments, leave HOST_CERT_PATH unset - mount will fail silently with /nonexistent
+      # Also set REQUESTS_CA_BUNDLE and PIP_CERT in .env when using certificates
+      - ${HOST_CERT_PATH:-/nonexistent}:/app/cert:ro
+
+      # Optional: Development mode - mount source for live reload (COMMENT OUT FOR PRODUCTION)
+      # - ../../enlweb-api/src:/app:ro
+
+    networks:
+      - enlweb-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 5s
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+
+  enlweb-client:
+    image: norceresearch1/enlweb-client:2026.6.1
+    container_name: enlweb-client-odin-ml
+    ports:
+      - "80:80"
+    networks:
+      - enlweb-network
+    depends_on:
+      enlweb-api:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:80/health"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 5s
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.1'
+          memory: 128M
+
+networks:
+  enlweb-network:
+    driver: bridge

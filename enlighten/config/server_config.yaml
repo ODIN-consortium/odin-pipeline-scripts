@@ -1,0 +1,24 @@
+# Server configuration for ODIN-ML environment
+# Migrated from enlweb/environments/ODIN/config/local/serverConfig.json
+# sml c
+# Path to data directory
+# Use environment variable for local customization: ${ENL_DATA_PATH}
+# Set this in a .env file in this directory (see .env.example)
+data_path: ${ENL_DATA_PATH}
+
+# Path to logs directory
+log_path: ./logs
+
+# Path to files directory (contains public files, templates, views, etc.)
+# Use environment variable for local customization: ${ENL_PUBLIC_FILES_PATH}
+# Set this in a .env file in this directory (see .env.example)
+public_files_path: ${ENL_PUBLIC_FILES_PATH}
+
+# Dataset configuration - defines templates for different dataset types
+# This is used by the frontend to determine how to render different dataset types
+dataset_config:
+  templates:
+    - pattern: .*taxprofiler.*
+      path: taxprofiler_map.json
+    - pattern: BiomemeAssay.*
+      path: biomeme_viewer.json

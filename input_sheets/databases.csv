@@ -1,0 +1,2 @@
+tool,db_name,db_params,db_path
+kraken2,db2,--quick,/home/odin-ml/store_dir/combined_pathogens

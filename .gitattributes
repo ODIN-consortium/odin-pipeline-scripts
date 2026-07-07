@@ -1,0 +1,15 @@
+# Default handling for shell scripts
+*.sh text eol=lf executable
+
+# Shell utility files that should only be sourced, not executed
+scripts/config_utils.sh text eol=lf -executable
+
+# Python files should use LF
+*.py text eol=lf
+
+# Markdown files
+*.md text eol=lf
+
+# Ensure all text files have consistent line endings
+* text=auto eol=lf
+

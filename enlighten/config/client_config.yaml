@@ -1,0 +1,72 @@
+# OpenEnlighten Client Configuration
+# This file configures the behavior and appearance of the Angular frontend
+
+htmlTitle: "ODIN Pathogen explorer"
+title: "Enlighten"
+readOnly: true
+enableUploadView: true
+enableDownloadView: true
+
+headerStyle:
+  background-image: "linear-gradient(rgb(145,240,237), rgb(0, 46, 122))"
+  color: "rgb(230, 230, 230)"
+
+logos:
+  - src: "/public/html/odin_logo.png"
+    url: "https://odin-wsp.tghn.org/"
+
+# View configuration
+defaultView: "pathogen explorer"
+views:
+  - "pathogen explorer"
+viewTemplate: "view-template"
+
+links:
+  - label: "User Manual"
+    url: "/public/html/userdoc/index.html"
+
+metadataColumns:
+  info: "METADATA"
+  href: "url"
+
+supportedActions:
+  dataset: "Add"
+  page: "Explore"
+  external: "Link"
+
+# Cesium configuration
+cesiumWMSFeatureInSeparateTab: true
+
+cesiumLayers:
+  base:
+    - type: "Tile"
+      name: "CartoDB Positron (grey)"
+      tooltip: "CartoDB Positron - light grey map style, good contrast for data overlays"
+      iconUrl: "/public/html/carto_positron_icon.png"
+      options:
+        url: "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png"
+        credit: "Map tiles by CartoDB, under CC BY 3.0. Data by OpenStreetMap, under ODbL."
+
+    - type: "OSM"
+      name: "Open­Street­Map"
+      tooltip: "OpenStreetMap (OSM) is a collaborative project to create a free editable map of the world.\nhttp://www.openstreetmap.org"
+      iconUrl: "assets/Cesium/Widgets/Images/ImageryProviders/openStreetMap.png"
+      options:
+        url: "https://a.tile.openstreetmap.org/"
+        credit: "MapQuest, OpenStreetMap and contributors, CC-BY-SA"
+
+    - type: "ArcGis"
+      name: "ArcGis"
+      tooltip: "This worldwide street map presents highway-level data for the world. Street-level data includes the United States; much of Canada; Japan; most countries in Europe; Australia and New Zealand; India; parts of South America including Argentina, Brazil, Chile, Colombia, and Venezuela; Ghana; and parts of southern Africa including Botswana, Lesotho, Namibia, South Africa, and Swaziland.\nhttp://www.esri.com"
+      iconUrl: "assets/Cesium/Widgets/Images/ImageryProviders/ArcGisMapServiceWorldImagery.png"
+      options:
+        url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"
+
+  terrain:
+    - type: "Ellipsoid"
+      name: "WGS84 Ellipsoid"
+      iconUrl: "assets/Cesium/Widgets/Images/TerrainProviders/Ellipsoid.png"
+      tooltip: "WGS84 standard ellipsoid, also known as EPSG:4326"
+
+i18n:
+  "datetime64[ns, UTC]": "Time"
