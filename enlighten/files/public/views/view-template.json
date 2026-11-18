@@ -1,0 +1,48 @@
+{
+  "name": "default",
+  "value": {
+    "name": "default",
+    "filterVisibility": true,
+    "fillNaN": false,
+    "pages": [
+      {
+        "name": "Info",
+        "columns": "1",
+        "tiles": [
+          {
+            "id": "8749360104551214",
+            "scaleFactor": 30,
+            "colormap": "api/cmap/viridis",
+            "rawData": false,
+            "hasRawData": false,
+            "lastDraw": 0,
+            "recommendedDrawLoad": 20,
+            "recommendedDrawSteps": 2,
+            "plotModels": [
+
+            ],
+            "sizeFactor": 1,
+            "qcFilter": false,
+            "info": "welcome.html",
+            "type": "info",
+            "dataset": "metadata",
+            "datasetType": "metadata",
+            "columns": [
+
+            ],
+            "filters": {
+
+            },
+            "bounds": {
+
+            },
+            "mapSettings": null,
+            "cesiumSettings": null
+          }
+        ]
+      }
+    ],
+    "selectedPage": 0,
+    "datasets": []
+  }
+}

@@ -1,0 +1,14 @@
+# Default ODIN Mobile Lab Pipeline Paths
+# Copied to ~/.odin_ml/odin_paths.txt on first run; the scripts fall back to these values
+# for any setting that is unset there. Paths are prompted for and can be changed per run.
+
+minknow_data_dir="${HOME}/ODIN/minknow_output/"
+venv_folder="${HOME}/venv"
+output_dir="${HOME}/ODIN/data"
+metadata_file="${HOME}/ODIN/data/metadata.xlsx"
+databases_file="${HOME}/ODIN/input_sheets/databases.csv"
+taxprofiler_dir="${HOME}/.nextflow/assets/nf-core"
+biomeme_data_path="${HOME}/ODIN/data"
+pathogens_file="${HOME}/pipeline_scripts/config/pathogen_group_map.yaml"
+amr_data_path="${HOME}/ODIN/data"
+amr_output_dir="${HOME}/ODIN/data/amr_datasets"

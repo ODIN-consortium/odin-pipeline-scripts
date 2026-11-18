@@ -1,0 +1,17 @@
+run_name,target_id,reason,decided_by,date
+# Biomeme runs whose assay the lab has declared unreliable. decode.py flags every sample well of
+# the (run, target) with quality_flag 5: not a detection, not a negative. target_id '*' = every
+# target of the run. Record the decision in the metadata change log (Decisions sheet) as well.
+#
+# 24 Sept 2025: the Mpox/Orthopox primer and probe stocks were contaminated with positive-control
+# DNA during set-up of the first Mpox run of the day, so every Mpox/Orthopox reaction from that run
+# on is unreliable (decision D-f in the ODIN metadata change log). No Mpox assay was run after 24 Sept.
+2025-09-24-04104414,E9L,Mpox/Orthopox primer and probe stocks contaminated with positive-control DNA during set-up (24 Sept 2025),ODIN project,2026-10-21
+2025-09-24-04104414,G2R_G,Mpox/Orthopox primer and probe stocks contaminated with positive-control DNA during set-up (24 Sept 2025),ODIN project,2026-10-21
+2025-09-24-04104414,G2R_WA,Mpox/Orthopox primer and probe stocks contaminated with positive-control DNA during set-up (24 Sept 2025),ODIN project,2026-10-21
+2025-09-24-07193197,E9L,Mpox/Orthopox primer and probe stocks contaminated with positive-control DNA during set-up (24 Sept 2025),ODIN project,2026-10-21
+2025-09-24-07193197,G2R_G,Mpox/Orthopox primer and probe stocks contaminated with positive-control DNA during set-up (24 Sept 2025),ODIN project,2026-10-21
+2025-09-24-07193197,G2R_WA,Mpox/Orthopox primer and probe stocks contaminated with positive-control DNA during set-up (24 Sept 2025),ODIN project,2026-10-21
+2025-09-24-08252415,E9L,Mpox/Orthopox primer and probe stocks contaminated with positive-control DNA during set-up (24 Sept 2025),ODIN project,2026-10-21
+2025-09-24-08252415,G2R_G,Mpox/Orthopox primer and probe stocks contaminated with positive-control DNA during set-up (24 Sept 2025),ODIN project,2026-10-21
+2025-09-24-08252415,G2R_WA,Mpox/Orthopox primer and probe stocks contaminated with positive-control DNA during set-up (24 Sept 2025),ODIN project,2026-10-21

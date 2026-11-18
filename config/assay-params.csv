@@ -1,0 +1,14 @@
+Pathogen,Target_ID,M,B,E,T
+Generic Orthopox,E9L,-3.66, 39.98,0.87,400
+Generic Mpox,G2R_G,-3.58,  40.25,0.89,400
+Mpox Kamituga strain clade IB,Mpox-K,-3.47,  41.15,0.86,400
+Mpox Congo strain clade I,C3L,-3.45,  40.64,0.94,400
+Mpox West African strain clade II,G2R_WA,-3.49, 39.87,0.88,400
+Poliovirus-2,WPV1,-3.25, 38.69,1.03,40
+Rotavirus A,RotaA,-3.79, 41.90,0.84,200
+Hepatitis A virus,hav,-3.55, 40.35,0.91,100
+Vibrio cholera,ctxA,-3.69, 42.91,0.87,400
+Vibrio metschnikovii,infC,NA,NA,NA, NA
+Salmonella typhi,STadh,-3.59, 39.67,0.90,275
+Klebsiella pneumoniae,Khe,-3.22, 36.66,1.05,180
+Escherichia coli,uidA,-3.46, 39.43,0.94,200

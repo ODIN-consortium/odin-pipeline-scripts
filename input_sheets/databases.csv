@@ -1,0 +1,2 @@
+tool,db_name,db_params,db_path
+kraken2,db2,--quick,/path/to/store_dir/combined_pathogens

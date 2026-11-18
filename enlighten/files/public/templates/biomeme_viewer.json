@@ -1,0 +1,429 @@
+
+   [
+        {
+            "columns": "8",
+            "id": "${dataset}${chunk_id}_0",
+            "name": "${dataset_name} Explorer",
+            "tiles": [
+                {
+                    "activeProbe": false,
+                    "bounds": {
+                    },
+                    "cesiumSettings": null,
+                    "colSpan": 1,
+                    "columns": [
+                    ],
+                    "datasetType": "dataset",
+                    "filters": {
+                        "X": [
+                            0.5,
+                            1.5
+                        ]
+                    },
+                    "hasFilters": true,
+                    "hasRawData": false,
+                    "id": "_7030543405906537_1756102815383",
+                    "info": "",
+                    "lastDraw": 0,
+                    "legendVisible": false,
+                    "mapSettings": null,
+                    "pageId": "0",
+                    "playback": false,
+                    "plotModels": [
+                        {
+                            "attributes": [
+                                "x-axis",
+                                "y-axis",
+                                "color"
+                            ],
+                            "barFuncName": "Mean",
+                            "barNumColumns": 10,
+                            "color": {
+                                "colormap": "api/cmap/viridis",
+                                "rgb": [
+                                    55,
+                                    126,
+                                    184
+                                ]
+                            },
+                            "columns": {
+                                "x-axis": {
+                                    "bounds": [
+                                    ],
+                                    "column": "presence",
+                                    "dateOffset": 0,
+                                    "index": 0,
+                                    "name": "x-axis",
+                                    "parameters": "",
+                                    "value": "api/data/${dataset}/${chunk_id}/presence"
+                                }
+                            },
+                            "dataset": "${dataset}",
+                            "filterVisibility": true,
+                            "id": 0.307993742296926,
+                            "pageId": "${chunk_id}",
+                            "pointSizes": [
+                            ],
+                            "type": "BarPlot",
+                            "vectorScale": 1
+                        }
+                    ],
+                    "qcFilter": false,
+                    "rawData": false,
+                    "recommendedDrawLoad": 20,
+                    "recommendedDrawSteps": 2,
+                    "rowSpan": 1,
+                    "scaleFactor": 30,
+                    "selectedBarId": "bar_true",
+                    "sizeFactor": 1,
+                    "trackValue": false,
+                    "type": "bar"
+                },
+                {
+                    "activeProbe": false,
+                    "bounds": {
+                    },
+                    "cesiumSettings": null,
+                    "colSpan": 7,
+                    "columns": [
+                    ],
+                    "dataset": "${dataset}",
+                    "datasetType": "dataset",
+                    "filters": {
+                    },
+                    "hasFilters": false,
+                    "hasRawData": false,
+                    "id": "_6665501642458769_1756102815383",
+                    "info": "",
+                    "lastDraw": 0,
+                    "legendVisible": false,
+                    "mapSettings": null,
+                    "maximizeColumns": {
+                    },
+                    "pageId": "${chunk_id}",
+                    "playback": false,
+                    "plotModels": [
+                    ],
+                    "qcFilter": false,
+                    "rawData": false,
+                    "recommendedDrawLoad": 20,
+                    "recommendedDrawSteps": 2,
+                    "rowSpan": 1,
+                    "scaleFactor": 30,
+                    "sizeFactor": 1,
+                    "trackValue": false,
+                    "type": "table"
+                },
+                {
+                    "activeProbe": false,
+                    "bounds": {
+                    },
+                    "cesiumSettings": null,
+                    "colSpan": 4,
+                    "columns": [
+                    ],
+                    "datasetType": "dataset",
+                    "filters": {
+                    },
+                    "hasFilters": false,
+                    "hasRawData": false,
+                    "id": "_502550055740846_1756102827961",
+                    "info": "",
+                    "lastDraw": 0,
+                    "legendVisible": false,
+                    "mapSettings": null,
+                    "pageId": "0",
+                    "playback": false,
+                    "plotModels": [
+                        {
+                            "attributes": [
+                                "x-axis",
+                                "y-axis",
+                                "color"
+                            ],
+                            "barFuncName": "Mean",
+                            "barNumColumns": 10,
+                            "color": {
+                                "colormap": "api/cmap/viridis",
+                                "rgb": [
+                                    55,
+                                    126,
+                                    184
+                                ]
+                            },
+                            "columns": {
+                                "x-axis": {
+                                    "bounds": [
+                                    ],
+                                    "column": "Pathogen",
+                                    "dateOffset": 0,
+                                    "index": 0,
+                                    "name": "x-axis",
+                                    "parameters": "",
+                                    "value": "api/data/${dataset}/${chunk_id}/Pathogen"
+                                }
+                            },
+                            "dataset": "${dataset}",
+                            "filterVisibility": true,
+                            "id": 0.390375941032733,
+                            "pageId": "${chunk_id}",
+                            "pointSizes": [
+                            ],
+                            "type": "BarPlot",
+                            "vectorScale": 1
+                        }
+                    ],
+                    "qcFilter": false,
+                    "rawData": false,
+                    "recommendedDrawLoad": 20,
+                    "recommendedDrawSteps": 2,
+                    "rowSpan": 1,
+                    "scaleFactor": 30,
+                    "sizeFactor": 1,
+                    "trackValue": false,
+                    "type": "bar"
+                },
+                {
+                    "activeProbe": false,
+                    "bounds": {
+                        "X": [
+                            -180,
+                            180
+                        ],
+                        "Y": [
+                            -90,
+                            90
+                        ]
+                    },
+                    "cesiumSettings": {
+                        "background": "",
+                        "camera": {
+                            "direction": {
+                                "x": -0.7682179040358,
+                                "y": -0.628772862418173,
+                                "z": 0.120357548185809
+                            },
+                            "frustum": {
+                                "far": 10000000000,
+                                "fov": 1.0471975511966,
+                                "near": 0.1
+                            },
+                            "position": {
+                                "x": 5020499.31162135,
+                                "y": 4109190.5126823,
+                                "z": -781374.765639468
+                            },
+                            "positionCartographic": {
+                                "height": 156801.555936666,
+                                "latitude": -0.12064191112502,
+                                "longitude": 0.685909558163101
+                            },
+                            "right": {
+                                "x": -0.633377128881288,
+                                "y": 0.773843273932194,
+                                "z": 8.46545056276682E-16
+                            },
+                            "up": {
+                                "x": 0.0931378791305588,
+                                "y": 0.0762317183091184,
+                                "z": 0.992730608269283
+                            }
+                        },
+                        "sceneMode": 3,
+                        "terrain": ""
+                    },
+                    "colSpan": 4,
+                    "columns": [
+                    ],
+                    "datasetType": "dataset",
+                    "filters": {
+                    },
+                    "hasFilters": false,
+                    "hasRawData": false,
+                    "id": "_9268955202035948_1756102827961",
+                    "info": "",
+                    "lastDraw": 462852.400000095,
+                    "legendVisible": false,
+                    "mapSettings": null,
+                    "pageId": "0",
+                    "playback": false,
+                    "plotModels": [
+                        {
+                            "attributes": [
+                                "x-axis",
+                                "y-axis",
+                                "color",
+                                "size"
+                            ],
+                            "color": {
+                                "colormap": "api/cmap/viridis",
+                                "rgb": [
+                                    55,
+                                    126,
+                                    184
+                                ]
+                            },
+                            "columns": {
+                                "x-axis": {
+                                    "bounds": [
+                                        "15.306081771850586",
+                                        "39.24400329589844"
+                                    ],
+                                    "column": "longitude",
+                                    "dateOffset": 0,
+                                    "index": 0,
+                                    "name": "x-axis",
+                                    "parameters": "",
+                                    "value": "api/data/${dataset}/${chunk_id}/longitude"
+                                },
+                                "y-axis": {
+                                    "bounds": [
+                                        "-6.8285908699035645",
+                                        "-4.314284324645996"
+                                    ],
+                                    "column": "latitude",
+                                    "dateOffset": 0,
+                                    "index": 1,
+                                    "name": "y-axis",
+                                    "parameters": "",
+                                    "value": "api/data/${dataset}/${chunk_id}/latitude"
+                                }
+                            },
+                            "dataset": "${dataset}",
+                            "filterVisibility": true,
+                            "id": 0.435364415741676,
+                            "pageId": "${chunk_id}",
+                            "pointSizes": [
+                                9,
+                                9
+                            ],
+                            "type": "ScatterPlot",
+                            "vectorScale": 1
+                        }
+                    ],
+                    "qcFilter": false,
+                    "rawData": false,
+                    "recommendedDrawLoad": 100,
+                    "recommendedDrawSteps": 1,
+                    "rowSpan": 2,
+                    "scaleFactor": 30,
+                    "sizeFactor": 1,
+                    "timerRequest": null,
+                    "trackValue": false,
+                    "type": "GLOBE"
+                },
+                {
+                    "activeProbe": false,
+                    "bounds": {
+                    },
+                    "cesiumSettings": null,
+                    "colSpan": 4,
+                    "columns": [
+                    ],
+                    "datasetType": "dataset",
+                    "filters": {
+                    },
+                    "hasFilters": false,
+                    "hasRawData": false,
+                    "id": "_8032103331954588_1756102827961",
+                    "info": "",
+                    "lastDraw": 0,
+                    "legendVisible": false,
+                    "mapSettings": null,
+                    "pageId": "0",
+                    "playback": false,
+                    "plotModels": [
+                        {
+                            "attributes": [
+                                "x-axis",
+                                "y-axis",
+                                "color"
+                            ],
+                            "barFuncName": "Mean",
+                            "barNumColumns": 10,
+                            "color": {
+                                "colormap": "api/cmap/viridis",
+                                "rgb": [
+                                    55,
+                                    126,
+                                    184
+                                ]
+                            },
+                            "columns": {
+                                "x-axis": {
+                                    "bounds": [
+                                    ],
+                                    "column": "site_ID",
+                                    "dateOffset": 0,
+                                    "index": 0,
+                                    "name": "x-axis",
+                                    "parameters": "",
+                                    "value": "api/data/${dataset}/${chunk_id}/site_ID"
+                                }
+                            },
+                            "dataset": "${dataset}",
+                            "filterVisibility": true,
+                            "id": 0.891390045206161,
+                            "pageId": "${chunk_id}",
+                            "pointSizes": [
+                            ],
+                            "type": "BarPlot",
+                            "vectorScale": 1
+                        }
+                    ],
+                    "qcFilter": false,
+                    "rawData": false,
+                    "recommendedDrawLoad": 20,
+                    "recommendedDrawSteps": 2,
+                    "rowSpan": 1,
+                    "scaleFactor": 30,
+                    "sizeFactor": 1,
+                    "trackValue": false,
+                    "type": "bar"
+                }
+            ]
+        },
+        {
+            "columns": "1",
+            "id": "${dataset}${chunk_id}_1",
+            "name": "${dataset_name} List",
+            "tiles": [
+                {
+                    "activeProbe": false,
+                    "bounds": {
+                    },
+                    "cesiumSettings": null,
+                    "colSpan": 1,
+                    "columns": [
+                    ],
+                    "dataset": "${dataset}",
+                    "datasetType": "dataset",
+                    "filters": {
+                    },
+                    "hasFilters": false,
+                    "hasRawData": false,
+                    "id": "_9037814588327505_1756370681037",
+                    "info": "",
+                    "lastDraw": 0,
+                    "legendVisible": false,
+                    "mapSettings": null,
+                    "maximizeColumns": {
+                    },
+                    "pageId": "${chunk_id}",
+                    "playback": false,
+                    "plotModels": [
+                    ],
+                    "qcFilter": false,
+                    "rawData": false,
+                    "recommendedDrawLoad": 20,
+                    "recommendedDrawSteps": 2,
+                    "rowSpan": 1,
+                    "scaleFactor": 30,
+                    "sizeFactor": 1,
+                    "trackValue": false,
+                    "type": "table"
+                }
+            ]
+        }
+    ]
+   
